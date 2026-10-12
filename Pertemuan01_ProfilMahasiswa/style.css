@@ -1,0 +1,104 @@
+/* set margin dan padding semua elemen 0 */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background:pink;
+  padding: 80px;
+  text-align: center;
+}
+
+nav {
+  background:crimson;
+  padding: 8px;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+
+}
+
+nav a {
+    color: crimson;
+    text-decoration: none;
+    padding: 2px 15px;
+    background: floralwhite;
+    border-radius:4px;
+    text-align: center;
+}
+
+body {
+    position: relative;
+    min-height: 100vh;
+}
+
+body::before{
+  content: "";
+  position: fixed;
+  inset: 0; /* supaya atas bawah kanan kiri = 0, memenuhi layar */
+
+  background-image: url("images/background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  opacity: 0.2;
+    z-index: -1;
+}
+
+/* template box transparan untuk teks*/
+.aboutme, .skills {
+    position: relative; /* h2 absolut akan diposisikann relatif terhadap kotak .aboutme dan .skills */
+    width: 70%;
+    margin: 50px auto;
+    padding: 40px 30px 30px; /* atas kiri-kanan bawah */
+    background-color: rgba(255, 192, 203, 0.3);
+    border: 2px solid #c76b7f;
+    border-radius: 15px;
+}
+
+.aboutme p {
+    line-height: 2;
+}
+
+.skills li {
+    margin-bottom: 18px;
+}
+
+.skills ol {
+    margin: 0;
+    padding-left: 15px; /* untuk mengatur jarak/inden list dari kiri */
+}
+
+/* template h2 bentuk oval */
+h2 {
+    position: absolute; /* membuat posisi h2 dapat diatur bebas */
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%); /* geser h2 ke kiri sebesar setengah lebar h2. */
+    color: floralwhite;
+    background-color: crimson;
+    padding: 8px 40px;
+    border-radius: 55px;
+    white-space: nowrap;
+}
+
+footer {
+  padding: 20px;
+  font-size: small;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background:pink;
+}
+
+footer div {
+  display: flex;
+  gap: 10px;
+}
+
+footer a {
+  text-decoration: none;
+  color:black;
+}
